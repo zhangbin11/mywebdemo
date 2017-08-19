@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+  
+<mapper namespace="prs.dao.user.UserDao">
+
+	<resultMap type="prs.model.user.UserEntity" id="userEntity">
+        <id property="id" column="id"/>
+        <result property="username" column="username"/>
+        <result property="password" column="password"/>
+        <result property="nickname" column="nickname"/>
+    </resultMap>
+    
+    <sql id="udef">
+    	username,
+    	password
+    </sql>
+    
+    <select id="getByUserName" resultType="map" resultMap="userEntity">
+    	select id, 
+    	<include refid="udef"/>
+    	from t_user
+    	where 
+    	username=#{username}
+    </select>
+
+</mapper>
