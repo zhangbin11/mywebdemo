@@ -1,1 +1,7 @@
-/target/
+target
+mywebdemo.iml
+.idea
+.settings
+.classpath
+.gitattributes
+.project
