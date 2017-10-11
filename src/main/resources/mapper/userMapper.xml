@@ -12,14 +12,15 @@
         <result property="nickname" column="nickname"/>
     </resultMap>
     
-    <sql id="udef">
+    <sql id="template">
     	username,
-    	password
+    	password,
+    	nickname
     </sql>
     
     <select id="getByUserName" resultType="map" resultMap="userEntity">
     	select id, 
-    	<include refid="udef"/>
+    	<include refid="template"/>
     	from t_user
     	where 
     	username=#{username}
