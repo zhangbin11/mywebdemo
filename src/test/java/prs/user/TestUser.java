@@ -10,7 +10,7 @@ import javax.annotation.Resource;
 
 public class TestUser extends BaseTest2 {
 	
-	@Resource(name="user-UserDao")
+	@Resource(name="userDao")
 	private UserDao usrDao;
 	
 	@Test

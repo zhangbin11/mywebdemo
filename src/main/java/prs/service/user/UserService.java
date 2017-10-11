@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 import prs.dao.user.UserDao;
 import prs.model.user.UserEntity;
 
-@Service("user-UserService")
+@Service("userService")
 public class UserService {
 	
-	@Resource(name="user-UserDao")
+	@Resource(name="userDao")
 	private UserDao usrDao;
 	
 	public String getUserByUserName() {

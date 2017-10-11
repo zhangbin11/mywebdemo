@@ -13,7 +13,7 @@ import prs.service.user.UserService;
 @Controller
 public class LoginController {
 	
-	@Resource(name="user-UserService")
+	@Resource(name="userService")
 	private UserService userService;
 
 	@RequestMapping("/login")

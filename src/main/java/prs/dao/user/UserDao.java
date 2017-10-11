@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import prs.model.user.UserEntity;
 
-@Repository("user-UserDao")
+@Repository("userDao")
 public interface UserDao {
 	UserEntity getByUserName(@Param("username")String username);
 }
