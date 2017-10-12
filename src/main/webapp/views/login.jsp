@@ -5,7 +5,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Insert title here</title>
-    <link href="../css/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="../static/css/bootstrap/bootstrap.css" rel="stylesheet">
 
 </head>
 <body>
@@ -14,4 +14,4 @@
 </html>
 
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-<script src="../js/bootstrap/bootstrap.js"></script>
+<script src="../static/js/bootstrap/bootstrap.js"></script>
