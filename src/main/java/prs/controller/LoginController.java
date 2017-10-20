@@ -6,25 +6,24 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import prs.dao.user.UserDao;
-import prs.model.user.UserEntity;
+import org.springframework.web.servlet.ModelAndView;
 import prs.service.user.UserService;
 
 @Controller
 public class LoginController {
-	
-	@Resource(name="userService")
-	private UserService userService;
 
-	@RequestMapping("/login")
-	public String loginView() {
-		System.out.println("???");
-		return "login";
-	}
-	
-	@RequestMapping("/getzs")
-	@ResponseBody
-	public String getUserByUserName() {
-		return userService.getUserByUserName();
-	}
+    @Resource(name = "userService")
+    private UserService userService;
+
+    @RequestMapping("/login")
+    public ModelAndView loginView() {
+        System.out.println("???");
+        return new ModelAndView("login");
+    }
+
+    @RequestMapping("/getzs")
+    @ResponseBody
+    public String getUserByUserName() {
+        return userService.getUserByUserName();
+    }
 }
